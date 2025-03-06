@@ -1,0 +1,78 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BIOS", "BIOS", "{4C211D00-A64D-4D71-B4AA-7957E9E963F0}"
+	ProjectSection(SolutionItems) = preProject
+		BIOS\bios.asm = BIOS\bios.asm
+		BIOS\bios.c = BIOS\bios.c
+		BIOS\bios.gil = BIOS\bios.gil
+		BIOS\biosinfo.asm = BIOS\biosinfo.asm
+		BIOS\biosinterrupts.asm = BIOS\biosinterrupts.asm
+		BIOS\boot.asm = BIOS\boot.asm
+		BIOS\cmos.bin = BIOS\cmos.bin
+		BIOS\config.asm = BIOS\config.asm
+		BIOS\config.cfg = BIOS\config.cfg
+		N:\Users\David\Dropbox\Code Base\gsvmos\bin\CPU1Assembler.exe = N:\Users\David\Dropbox\Code Base\gsvmos\bin\CPU1Assembler.exe
+		BIOS\idt.asm = BIOS\idt.asm
+		BIOS\memory.asm = BIOS\memory.asm
+		BIOS\prep_cmos.bin_.asm = BIOS\prep_cmos.bin_.asm
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OS", "OS", "{C7B12B2C-DEC8-411E-BF3A-6DA523CA514E}"
+	ProjectSection(SolutionItems) = preProject
+		OS\bootstrap.asm = OS\bootstrap.asm
+		OS\filetable.asm = OS\filetable.asm
+		OS\noboot.asm = OS\noboot.asm
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "boot", "boot", "{1A8D0946-9D3E-4196-B650-56A3B16687E6}"
+	ProjectSection(SolutionItems) = preProject
+		OS\boot\bootsys.asm = OS\boot\bootsys.asm
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "drivers", "drivers", "{59B1CC5B-299F-44CA-9AF3-BFA388FDC3F4}"
+	ProjectSection(SolutionItems) = preProject
+		BIOS\drivers\delay.asm = BIOS\drivers\delay.asm
+		BIOS\drivers\disk.asm = BIOS\drivers\disk.asm
+		BIOS\drivers\gsbio.asm = BIOS\drivers\gsbio.asm
+		BIOS\drivers\keyboard.asm = BIOS\drivers\keyboard.asm
+		BIOS\drivers\video.asm = BIOS\drivers\video.asm
+		BIOS\drivers\video.c = BIOS\drivers\video.c
+		BIOS\drivers\video.h = BIOS\drivers\video.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "POST", "POST", "{A4A26EF6-23C3-4EFA-B560-14B47C7603C0}"
+	ProjectSection(SolutionItems) = preProject
+		BIOS\POST\bootcheck.asm = BIOS\POST\bootcheck.asm
+		BIOS\POST\hardwaredetect.asm = BIOS\POST\hardwaredetect.asm
+		BIOS\POST\memorycheck.asm = BIOS\POST\memorycheck.asm
+		BIOS\POST\post.asm = BIOS\POST\post.asm
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VMFS", "VMFS", "{6B7DA6BE-DEB0-4CE1-A16B-2775B53DA677}"
+	ProjectSection(SolutionItems) = preProject
+		VMFS\bootsector.asm = VMFS\bootsector.asm
+		VMFS\disk.asm = VMFS\disk.asm
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4AA81FBB-48DA-4259-8608-4B0D6BF6BD04}"
+	ProjectSection(SolutionItems) = preProject
+		disk1.asm = disk1.asm
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1A8D0946-9D3E-4196-B650-56A3B16687E6} = {C7B12B2C-DEC8-411E-BF3A-6DA523CA514E}
+		{59B1CC5B-299F-44CA-9AF3-BFA388FDC3F4} = {4C211D00-A64D-4D71-B4AA-7957E9E963F0}
+		{A4A26EF6-23C3-4EFA-B560-14B47C7603C0} = {4C211D00-A64D-4D71-B4AA-7957E9E963F0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4461DD32-4DE9-4FB1-95D4-2C65925A9CBF}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,59 @@
+// bios.gil
+
+/* The first thing CPU1 does is perform a speed test.
+The speed test requires 5 operations. NOP is fastest.
+I'm not going to use a loop because jump instructions
+would count towards the operation count. */
+
+asm
+    nop
+    nop
+    nop
+    nop
+    nop
+endasm
+
+import("drivers\video.gil")
+import("idt.gil")
+import("drivers\gsbio.gil")
+import("drivers\keyboard.gil")
+import("biosinterrupts.gil")
+import("biosinfo.gil")
+import("POST\post.gil")
+import("memory.gil")
+import("boot.gil")
+import("config.gil")
+
+string inttest = "INTTEST\0"
+string inttesx = "         "
+
+ushort sbreq = 0
+
+function main(void) returns void
+    // Initialization
+    // Setup video memory
+    asm("mov smv, VIDEO")
+
+    // setup interrupt table
+    init_idt()
+    initbiosidt()
+
+    // install keyboard
+    installKeyboard()
+
+    // draw the screen
+    drawlogo()
+    printvers()
+    newline()
+
+    // begin POST
+    post()
+
+    // boot disk
+    asm
+        mov eax, 100
+        call delay
+        jmp boot
+        hlt
+    endasm
+end
